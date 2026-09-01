@@ -33,10 +33,9 @@ a { color: inherit; text-decoration: none; }
 .about-line { max-width: 38rem; margin: 0; font-size: clamp(1.05rem, 1.72vw, 1.52rem); line-height: 1.42; letter-spacing: -.022em; }
 .about-line.passion { margin-top: .7rem; }
 .about-line.motto { margin-top: .45rem; }
-.reveal-word { --delay: 0s; --duration: .46s; display: inline-block; opacity: 0; filter: blur(6px); transform: translateY(.24em); animation: word-in var(--duration) cubic-bezier(.22,.7,.2,1) var(--delay) both; }
-.motto .reveal-word { --duration: .5s; }
-.motto .reveal-word:last-child { --duration: .65s; }
-.motto .reveal-word:last-child em { color: inherit; font-size: inherit; font-weight: inherit; }
+.reveal-word { --delay: 0s; --duration: .55s; display: inline-block; opacity: 0; filter: blur(6px); transform: translateY(.24em); animation: word-in var(--duration) cubic-bezier(.22,.7,.2,1) var(--delay) both; }
+.motto .reveal-word { --duration: .6s; }
+.motto .reveal-word:last-child { --duration: .78s; }
 
 .work-list { border-top: 1px solid #9fa19c; }
 .role { display: grid; grid-template-columns: minmax(0, 1fr) max-content; gap: .35rem 1.25rem; margin: 0; padding: 1.4rem 0; border-bottom: 1px solid #9fa19c; align-items: baseline; }

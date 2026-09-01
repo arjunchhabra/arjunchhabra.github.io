@@ -12,9 +12,9 @@
   function prepareAbout(container) {
     const lines = [...container.querySelectorAll(".about-line")];
     const timings = [
-      { start: .12, step: .075 },
-      { start: 1.85, step: .095 },
-      { start: 3.35, step: .2 },
+      { start: .144, step: .09 },
+      { start: 2.22, step: .114 },
+      { start: 4.02, step: .24 },
     ];
 
     lines.forEach((line, lineIndex) => {
@@ -24,14 +24,8 @@
         const span = document.createElement("span");
         const lastWord = lineIndex === 2 && wordIndex === words.length - 1;
         span.className = "reveal-word";
-        span.style.setProperty("--delay", `${lastWord ? 4.35 : timings[lineIndex].start + timings[lineIndex].step * wordIndex}s`);
-        if (lastWord) {
-          const em = document.createElement("em");
-          em.textContent = word;
-          span.append(em);
-        } else {
-          span.textContent = word;
-        }
+        span.style.setProperty("--delay", `${lastWord ? 5.22 : timings[lineIndex].start + timings[lineIndex].step * wordIndex}s`);
+        span.textContent = word;
         line.append(span, wordIndex < words.length - 1 ? " " : "");
       });
     });
