@@ -1,5 +1,5 @@
 (() => {
-  const sections = new Set(["about", "work", "contact"]);
+  const sections = new Set(["about", "work"]);
   const stage = document.querySelector("#stage");
   let active = null;
   let transitionTimer = null;
@@ -33,6 +33,9 @@
         line.append(span, wordIndex < words.length - 1 ? " " : "");
       });
     });
+
+    const links = document.querySelector("#contact-links-template");
+    container.querySelector(".about-copy").append(links.content.cloneNode(true));
   }
 
   function updateNavigation(section) {

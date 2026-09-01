@@ -48,9 +48,8 @@ a { color: inherit; text-decoration: none; }
 .work-actions { display: flex; justify-content: flex-end; margin-top: 1.2rem; }
 .work-actions a { padding-bottom: .4rem; border-bottom: 1px solid currentColor; font: .64rem/1.4 Arial, Helvetica, sans-serif; letter-spacing: .13em; }
 
-.contact-page { max-width: 58rem; }
-.contact-page h1 { margin: 0; font-size: clamp(3rem, 8vw, 8rem); line-height: .98; font-weight: 400; letter-spacing: -.065em; }
 .icon-links { display: flex; align-items: center; gap: 1.15rem; margin-top: 3rem; }
+.about-links { margin-top: .9rem; }
 .icon-links a { width: 2rem; height: 2rem; display: grid; place-items: center; opacity: .72; transition: color .25s ease, opacity .25s ease, transform .25s ease; }
 .icon-links a:hover { color: #fff; opacity: 1; transform: translateY(-.12rem); }
 .icon-links svg { width: .95rem; height: .95rem; fill: currentColor; }
