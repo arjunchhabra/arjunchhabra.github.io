@@ -32,7 +32,7 @@
         } else {
           span.textContent = word;
         }
-        line.append(span, wordIndex < words.length - 1 ? "\u00a0" : "");
+        line.append(span, wordIndex < words.length - 1 ? " " : "");
       });
     });
   }

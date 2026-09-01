@@ -36,16 +36,16 @@ a { color: inherit; text-decoration: none; }
 .reveal-word { --delay: 0s; --duration: .46s; display: inline-block; opacity: 0; filter: blur(6px); transform: translateY(.24em); animation: word-in var(--duration) cubic-bezier(.22,.7,.2,1) var(--delay) both; }
 .motto .reveal-word { --duration: .5s; }
 .motto .reveal-word:last-child { --duration: .65s; }
+.motto .reveal-word:last-child em { color: inherit; font-size: inherit; font-weight: inherit; }
 
 .work-list { border-top: 1px solid #9fa19c; }
-.role { display: grid; grid-template-columns: 7.5rem minmax(12rem, .8fr) minmax(14rem, 1.2fr); gap: .55rem 1.75rem; margin: 0; padding: 1.4rem 0; border-bottom: 1px solid #9fa19c; align-items: baseline; }
+.role { display: grid; grid-template-columns: minmax(0, 1fr) max-content; gap: .35rem 1.25rem; margin: 0; padding: 1.4rem 0; border-bottom: 1px solid #9fa19c; align-items: baseline; }
 .role p, .role h2 { margin: 0; }
-.years { display: grid; grid-template-columns: 4ch 1fr minmax(4ch, auto); align-items: baseline; column-gap: .65ch; color: #b8bab5; font: .7rem/1.4 Arial, Helvetica, sans-serif; letter-spacing: .09em; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.years i { font-style: normal; text-align: center; }
-.years time:last-child { text-align: right; }
-.role h2 { color: #f0f0eb; font-size: 1.12rem; font-weight: 500; }
-.role .title { color: #c6c7c2; font: .88rem/1.4 Arial, Helvetica, sans-serif; }
-.role .technologies { grid-column: 2 / 4; color: #b8bab5; font: .72rem/1.5 Arial, Helvetica, sans-serif; letter-spacing: .025em; }
+.years { grid-column: 2; grid-row: 1; justify-self: end; display: flex; align-items: baseline; gap: .45ch; color: #b8bab5; font: .75rem/1.4 Arial, Helvetica, sans-serif; letter-spacing: .025em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.years i { font-style: normal; }
+.role h2 { grid-column: 1; grid-row: 1; min-width: 0; color: #f0f0eb; font-size: 1.12rem; font-weight: 500; }
+.role .title { grid-column: 1 / -1; grid-row: 2; color: #c6c7c2; font: .88rem/1.4 Arial, Helvetica, sans-serif; }
+.role .technologies { grid-column: 1 / -1; grid-row: 3; color: #b8bab5; font: .72rem/1.5 Arial, Helvetica, sans-serif; letter-spacing: .025em; }
 .work-actions { display: flex; justify-content: flex-end; margin-top: 1.2rem; }
 .work-actions a { padding-bottom: .4rem; border-bottom: 1px solid currentColor; font: .64rem/1.4 Arial, Helvetica, sans-serif; letter-spacing: .13em; }
 
@@ -84,11 +84,11 @@ a { color: inherit; text-decoration: none; }
   .portrait { grid-column: 1; grid-row: 1; width: 7rem; height: 7rem; opacity: .5; }
   .about-copy { grid-column: 1; grid-row: 2; max-width: none; }
   .about-line { font-size: clamp(1rem, 5.3vw, 1.35rem); }
-  .role { grid-template-columns: 7rem 1fr; gap: .45rem .75rem; padding: 1.15rem 0; }
-  .years { grid-column: 1; grid-row: 1; font-size: .68rem; }
-  .role h2 { grid-column: 2; grid-row: 1; font-size: .94rem; }
-  .role .title { grid-column: 2; grid-row: 2; font-size: .8rem; }
-  .role .technologies { grid-column: 2; grid-row: 3; font-size: .7rem; }
+  .role { grid-template-columns: minmax(0, 1fr) max-content; gap: .35rem .75rem; padding: 1.15rem 0; }
+  .years { grid-column: 2; grid-row: 1; font-size: .75rem; }
+  .role h2 { grid-column: 1; grid-row: 1; font-size: .94rem; }
+  .role .title { grid-column: 1 / -1; grid-row: 2; font-size: .8rem; }
+  .role .technologies { grid-column: 1 / -1; grid-row: 3; font-size: .7rem; }
   .icon-links { gap: .8rem; }
   .icon-links a { width: 2.2rem; height: 2.2rem; }
 }
