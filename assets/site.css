@@ -31,6 +31,7 @@ a { color: inherit; text-decoration: none; }
 .portrait { grid-column: 2; grid-row: 1; width: 100%; height: 100%; max-height: 38rem; align-self: center; object-fit: cover; object-position: 54% 30%; filter: grayscale(1) contrast(.92); opacity: .46; transition: filter .7s ease, opacity .7s ease; }
 .about-copy { grid-column: 1; grid-row: 1; align-self: center; max-width: 38rem; display: grid; gap: 1.35rem; }
 .about-line { max-width: 38rem; margin: 0; font-size: clamp(1.05rem, 1.72vw, 1.52rem); line-height: 1.42; letter-spacing: -.022em; }
+.about-line.experience { margin-top: -1rem; }
 .about-line.passion { margin-top: .7rem; }
 .about-line.motto { margin-top: .45rem; }
 .reveal-word { --delay: 0s; --duration: .55s; display: inline-block; opacity: 0; filter: blur(6px); transform: translateY(.24em); animation: word-in var(--duration) cubic-bezier(.22,.7,.2,1) var(--delay) both; }
@@ -48,8 +49,11 @@ a { color: inherit; text-decoration: none; }
 .work-actions { display: flex; justify-content: flex-end; margin-top: 1.2rem; }
 .work-actions a { padding-bottom: .4rem; border-bottom: 1px solid currentColor; font: .64rem/1.4 Arial, Helvetica, sans-serif; letter-spacing: .13em; }
 
+.about-signoff { margin-top: .9rem; opacity: 0; transform: translateY(.2rem); animation: signoff-in .55s ease 6.15s both; }
+.about-signature { margin: 0 0 .75rem; color: var(--content); font-size: .78rem; letter-spacing: .04em; }
 .icon-links { display: flex; align-items: center; gap: 1.15rem; margin-top: 3rem; }
-.about-links { margin-top: .9rem; }
+.about-links { margin-top: 0; }
+.contact-separator { opacity: .35; font: .65rem/1 Arial, Helvetica, sans-serif; }
 .icon-links a { width: 2rem; height: 2rem; display: grid; place-items: center; opacity: .72; transition: color .25s ease, opacity .25s ease, transform .25s ease; }
 .icon-links a:hover { color: #fff; opacity: 1; transform: translateY(-.12rem); }
 .icon-links svg { width: .95rem; height: .95rem; fill: currentColor; }
@@ -66,6 +70,7 @@ a { color: inherit; text-decoration: none; }
 .noscript { position: fixed; inset: 2rem; font: 1rem/1.5 Arial, sans-serif; }
 
 @keyframes word-in { to { opacity: 1; filter: blur(0); transform: translateY(0); } }
+@keyframes signoff-in { to { opacity: 1; transform: translateY(0); } }
 
 @media (hover: hover) { .portrait:hover { filter: grayscale(0) contrast(1) brightness(1.08); opacity: .72; } }
 
@@ -94,4 +99,5 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   .stage { transition-duration: .01ms !important; }
   .reveal-word { animation: none !important; opacity: 1; filter: none; transform: none; }
+  .about-signoff { animation: none !important; opacity: 1; transform: none; }
 }

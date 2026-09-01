@@ -17,7 +17,8 @@
     const lines = [...container.querySelectorAll(".about-line")];
     const timings = [
       { start: .144, step: .09 },
-      { start: 2.22, step: .114 },
+      { start: .75, step: .09 },
+      { start: 2.35, step: .115 },
       { start: 4.02, step: .24 },
     ];
 
@@ -26,7 +27,7 @@
       line.textContent = "";
       words.forEach((word, wordIndex) => {
         const span = document.createElement("span");
-        const lastWord = lineIndex === 2 && wordIndex === words.length - 1;
+        const lastWord = lineIndex === lines.length - 1 && wordIndex === words.length - 1;
         span.className = "reveal-word";
         span.style.setProperty("--delay", `${lastWord ? 5.22 : timings[lineIndex].start + timings[lineIndex].step * wordIndex}s`);
         span.textContent = word;
@@ -34,8 +35,8 @@
       });
     });
 
-    const links = document.querySelector("#contact-links-template");
-    container.querySelector(".about-copy").append(links.content.cloneNode(true));
+    const signoff = document.querySelector("#about-signoff-template");
+    container.querySelector(".about-copy").append(signoff.content.cloneNode(true));
   }
 
   function updateNavigation(section) {
