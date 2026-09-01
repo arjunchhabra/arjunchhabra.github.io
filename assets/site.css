@@ -32,7 +32,7 @@ a { color: inherit; text-decoration: none; }
 .about-copy { grid-column: 1; grid-row: 1; align-self: center; max-width: 38rem; display: grid; gap: 1.35rem; }
 .about-line { max-width: 38rem; margin: 0; font-size: clamp(1.05rem, 1.72vw, 1.52rem); line-height: 1.42; letter-spacing: -.022em; }
 .about-line.passion { margin-top: .7rem; }
-.about-line.motto { margin-top: .45rem; color: #9b9d97; font-size: clamp(.86rem, 1.12vw, 1rem); letter-spacing: .005em; }
+.about-line.motto { margin-top: .45rem; }
 .reveal-word { --delay: 0s; --duration: .46s; display: inline-block; opacity: 0; filter: blur(6px); transform: translateY(.24em); animation: word-in var(--duration) cubic-bezier(.22,.7,.2,1) var(--delay) both; }
 .motto .reveal-word { --duration: .5s; }
 .motto .reveal-word:last-child { --duration: .65s; }

@@ -12,8 +12,8 @@
   function prepareAbout(container) {
     const lines = [...container.querySelectorAll(".about-line")];
     const timings = [
-      { start: .12, step: .085 },
-      { start: 2.05, step: .13 },
+      { start: .12, step: .075 },
+      { start: 1.85, step: .095 },
       { start: 3.35, step: .2 },
     ];
 
