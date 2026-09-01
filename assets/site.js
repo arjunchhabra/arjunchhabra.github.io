@@ -9,6 +9,10 @@
     return sections.has(part) ? part : "about";
   }
 
+  function pathForSection(section) {
+    return section === "about" ? "/" : `/${section}/`;
+  }
+
   function prepareAbout(container) {
     const lines = [...container.querySelectorAll(".about-line")];
     const timings = [
@@ -64,7 +68,8 @@
     if (!link || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
     const section = link.dataset.route;
-    if (section !== active) history.pushState({ section }, "", `/${section}/`);
+    const path = pathForSection(section);
+    if (location.pathname !== path) history.pushState({ section }, "", path);
     render(section);
   });
 
