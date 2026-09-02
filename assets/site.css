@@ -50,7 +50,7 @@ a { color: inherit; text-decoration: none; }
 .work-actions a { padding-bottom: .4rem; border-bottom: 1px solid currentColor; font: .64rem/1.4 Arial, Helvetica, sans-serif; letter-spacing: .13em; }
 
 .about-signoff { margin-top: .9rem; opacity: 0; transform: translateY(.2rem); animation: signoff-in .55s ease 6.15s both; }
-.about-signature { margin: 0 0 .75rem; color: var(--content); font-size: .78rem; letter-spacing: .04em; }
+.about-signature { margin: 0 0 .75rem; color: var(--content); font-family: inherit; font-size: clamp(1.05rem, 1.72vw, 1.52rem); line-height: 1.42; letter-spacing: -.022em; }
 .icon-links { display: flex; align-items: center; gap: 1.15rem; margin-top: 3rem; }
 .about-links { margin-top: 0; }
 .contact-separator { opacity: .35; font: .65rem/1 Arial, Helvetica, sans-serif; }
